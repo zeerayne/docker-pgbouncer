@@ -60,7 +60,6 @@ port=${DB_PORT:-5432} user=${DB_USER:-postgres}
 [pgbouncer]
 listen_addr = 0.0.0.0
 listen_port = 5432
-unix_socket_dir =
 user = postgres
 auth_file = ${AUTH_FILE:-$PG_CONFIG_DIR/userlist.txt}
 ${AUTH_HBA_FILE:+auth_hba_file = ${AUTH_HBA_FILE}\n}\
