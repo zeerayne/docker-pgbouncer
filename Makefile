@@ -1,5 +1,8 @@
-all:
-	docker build --pull -t edoburu/pgbouncer .
+IMAGE_NAME=edoburu/pgbouncer
+IMAGE_VERSION=1.11.0
 
-clean:
-	docker rmi edoburu/pgbouncer:latest
+docker:
+	docker build --pull -t $(IMAGE_NAME):$(IMAGE_VERSION) .
+
+push:
+	docker push $(IMAGE_NAME):$(IMAGE_VERSION)
